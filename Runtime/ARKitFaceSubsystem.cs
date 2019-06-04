@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System;
 using AOT;
@@ -16,7 +16,6 @@ namespace UnityEngine.XR.ARKit
         /// <summary>
         /// calls available to native code, linked via extern C symbols
         /// </summary>
-#if UNITY_IOS && !UNITY_EDITOR
         [DllImport("__Internal")]
         static extern void UnityARKit_FaceProvider_Initialize();
 
@@ -57,62 +56,15 @@ namespace UnityEngine.XR.ARKit
         [DllImport("__Internal")]
         static extern unsafe void UnityARKit_FaceProvider_ReleaseFaceAnchor(
             void* faceAnchor);
-#else
-        static void UnityARKit_FaceProvider_Initialize()
-        { }
 
-        static void UnityARKit_FaceProvider_Shutdown()
-        { }
+        [DllImport("__Internal")]
+        static extern int UnityARKit_FaceProvider_GetSupportedFaceCount();
 
-        static void UnityARKit_FaceProvider_Start()
-        { }
+        [DllImport("__Internal")]
+        static extern int UnityARKit_FaceProvider_GetMaximumFaceCount();
 
-        static void UnityARKit_FaceProvider_Stop()
-        { }
-
-        static bool UnityARKit_FaceProvider_TryAcquireFaceBlendCoefficients(TrackableId faceId, out IntPtr ptrBlendCoefficientData, out int numArrayBlendCoefficients)
-        {
-            ptrBlendCoefficientData = IntPtr.Zero;
-            numArrayBlendCoefficients = 0;
-            return false;
-        }
-
-        static bool UnityARKit_FaceProvider_IsSupported()
-        {
-            return false;
-        }
-
-        static void UnityARKit_FaceProvider_DeallocateTempMemory(IntPtr ptr)
-        { }
-
-        static unsafe void* UnityARKit_FaceProvider_AcquireChanges(
-            out void* addedPtr, out int addedLength,
-            out void* updatedPtr, out int updatedLength,
-            out void* removedPtr, out int removedLength,
-            out int elementSize)
-        {
-            addedPtr = updatedPtr = removedPtr = null;
-            addedLength = updatedLength = removedLength = elementSize = 0;
-            return null;
-        }
-
-        static unsafe void UnityARKit_FaceProvider_ReleaseChanges(void* context)
-        { }
-
-        static unsafe void* UnityARKit_FaceProvider_AcquireFaceAnchor(
-            TrackableId faceId,
-            out void* vertexPtr, out void* uvPtr, out int vertexCount,
-            out void* indexPtr, out int triangleCount)
-        {
-            vertexPtr = uvPtr = indexPtr = null;
-            vertexCount = triangleCount = 0;
-            return null;
-        }
-
-        static unsafe void UnityARKit_FaceProvider_ReleaseFaceAnchor(
-            void* faceAnchor)
-        { }
-#endif
+        [DllImport("__Internal")]
+        static extern void UnityARKit_FaceProvider_SetMaximumFaceCount(int count);
 
         /// <summary>
         /// Get the blend shape coefficients for the face. Blend shapes describe a number of facial
@@ -348,12 +300,24 @@ namespace UnityEngine.XR.ARKit
                     UnityARKit_FaceProvider_ReleaseChanges(context);
                 }
             }
+
+            public override int supportedFaceCount
+            {
+                get { return UnityARKit_FaceProvider_GetSupportedFaceCount(); }
+            }
+
+            public override int maximumFaceCount
+            {
+                get { return UnityARKit_FaceProvider_GetMaximumFaceCount(); }
+                set { UnityARKit_FaceProvider_SetMaximumFaceCount(value); }
+            }
         }
 
         // this method is run on startup of the app to register this provider with XR Subsystem Manager
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void RegisterDescriptor()
         {
+#if UNITY_IOS && !UNITY_EDITOR
             var descriptorParams = new FaceSubsystemParams
             {
                 supportsFacePose = true,
@@ -364,6 +328,7 @@ namespace UnityEngine.XR.ARKit
             };
 
             XRFaceSubsystemDescriptor.Create(descriptorParams);
+#endif
         }
     }
 }

@@ -4,6 +4,9 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.1.0-preview.1] - 2019-06-05
+- Adding support for ARKit 3 functionality: multiple face tracking and tracking a face (with front camera) while in world tracking (with rear camera).
+
 ## [1.0.0-preview.6] - 2019-05-31
 ### Fixes
 - Fix documentation links.
