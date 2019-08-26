@@ -4,12 +4,19 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [1.1.0-preview.4] - 2019-07-29
-## Fixes
-- Recompile static library with Xcode 11 beta 5.
+## [3.0.0-preview.1] - 2019-08-27
+### New
+- This package now supports bulding with Xcode 9, 10, and 11 beta 7.
+
+## [1.1.0-preview.4]
+### New
+- Add support for eye tracking.
+
+### Fixes
+- Recompile static library with XCode 11 beta 5.
 
 ## [1.1.0-preview.3] - 2019-07-18
-## Fixes
+### Fixes
 - Recompile static library with Xcode 11 beta 4.
 
 ## [1.1.0-preview.2] - 2019-07-15

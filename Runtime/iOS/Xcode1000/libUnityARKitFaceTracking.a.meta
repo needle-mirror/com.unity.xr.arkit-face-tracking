@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3cf82132f2d5f47fd884ebb3d31097da
+guid: 430c454b77a9844cc99bdda48287219e
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -9,6 +9,7 @@ PluginImporter:
   isPreloaded: 0
   isOverridable: 1
   isExplicitlyReferenced: 0
+  validateReferences: 1
   platformData:
   - first:
       '': Any
@@ -18,6 +19,7 @@ PluginImporter:
         Exclude Android: 1
         Exclude Editor: 1
         Exclude Linux64: 1
+        Exclude Lumin: 1
         Exclude OSXUniversal: 1
         Exclude Win: 1
         Exclude Win64: 1
@@ -83,6 +85,7 @@ PluginImporter:
       enabled: 1
       settings:
         AddToEmbeddedBinaries: false
+        CPU: ARM64
         CompileFlags: 
         FrameworkDependencies: ARKit;
   userData: 

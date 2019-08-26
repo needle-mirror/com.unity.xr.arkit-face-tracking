@@ -1,6 +1,6 @@
 # About ARKit Face Tracking
 
-*The Timeline Examples package includes examples of Timeline assets, Timeline Instances, animation, GameObjects, and scripts that illustrate how to use Unity's Timeline. For more information, see [ Unity's Timeline](https://docs.unity3d.com/Manual/TimelineSection.html) in the [Unity Manual](https://docs.unity3d.com). For licensing and usage, see Package Licensing.*
+This package provides face tracking support to augment the [ARKit XR Plugin](https://docs.unity3d.com/Packages/com.unity.xr.arkit@3.0).
 
 # Installing ARKit Face Tracking
 
@@ -8,7 +8,7 @@ To install this package, follow the instructions in the [Package Manager documen
 
 # Using ARKit Face Tracking
 
-This package implements the face tracking subsystem defined in the [AR Subsystems](https://docs.unity3d.com/Packages/com.unity.xr.arsubsystems@2.1) package. Refer to that package's documentation for instructions on how to use basic face tracking.
+This package implements the face tracking subsystem defined in the [AR Subsystems](https://docs.unity3d.com/Packages/com.unity.xr.arsubsystems@3.0) package. Refer to that package's documentation for instructions on how to use basic face tracking.
 
 This package also provides additional, ARkit-specific face tracking functionality. ARKit provides a series of "blendshapes" to describe different features of a face. Each blendshape is modulated from 0..1. For example, there is a blendshape location describing how closed the mouth is.
 
@@ -16,9 +16,9 @@ This package also provides additional, ARkit-specific face tracking functionalit
 
 Face tracking requires the use of the front-facing (selfie) camera. When the front-facing camera is active, other tracking subsystems (e.g., plane tracking, image tracking) will not be available. Likewise, if the rear-facing camera is active, face tracking will not be available. If you `Start` other, conflicting subsystems (subsystems that require the rear-facing camera), the ARKit package may decide to use the rear-facing camera instead. Therefore, to use face tracking on ARKit, you should `Stop` any other subsystems which may require the rear-facing camera. These include
 
-* [Plane Tracking](https://docs.unity3d.com/Packages/com.unity.xr.arsubsystems@2.1/manual/plane-subsystem.html)
-* [Image Tracking](https://docs.unity3d.com/Packages/com.unity.xr.arsubsystems@2.1/manual/image-tracking.html)
-* [Object Tracking](https://docs.unity3d.com/Packages/com.unity.xr.arsubsystems@2.1/manual/object-tracking.html)
+* [Plane Tracking](https://docs.unity3d.com/Packages/com.unity.xr.arsubsystems@3.0/manual/plane-subsystem.html)
+* [Image Tracking](https://docs.unity3d.com/Packages/com.unity.xr.arsubsystems@3.0/manual/image-tracking.html)
+* [Object Tracking](https://docs.unity3d.com/Packages/com.unity.xr.arsubsystems@3.0/manual/object-tracking.html)
 
 
 # Technical details
@@ -47,10 +47,4 @@ None
 
 This version of *ARKit Face Tracking* includes
 
-* A static library which provides an implementation of the [`XRFaceSubsystem`](https://docs.unity3d.com/Packages/com.unity.xr.arsubsystems@2.1/manual/face-tracking.html).
-
-## Document revision history
-
-|Date|Reason|
-|----|------|
-|Aug 25, 2017|Document created. Matches package version 1.0.|
+* A static library which provides an implementation of the [`XRFaceSubsystem`](https://docs.unity3d.com/Packages/com.unity.xr.arsubsystems@3.0/manual/face-tracking.html).
