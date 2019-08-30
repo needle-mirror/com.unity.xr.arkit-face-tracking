@@ -1,6 +1,6 @@
 # About ARKit Face Tracking
 
-*The Timeline Examples package includes examples of Timeline assets, Timeline Instances, animation, GameObjects, and scripts that illustrate how to use Unity's Timeline. For more information, see [ Unity's Timeline](https://docs.unity3d.com/Manual/TimelineSection.html) in the [Unity Manual](https://docs.unity3d.com). For licensing and usage, see Package Licensing.*
+This package provides face tracking support to augment the [ARKit XR Plugin](https://docs.unity3d.com/Packages/com.unity.xr.arkit@2.1).
 
 # Installing ARKit Face Tracking
 
