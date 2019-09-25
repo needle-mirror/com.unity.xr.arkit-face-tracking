@@ -1,10 +1,10 @@
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using System;
-using AOT;
+using System.Runtime.InteropServices;
+
 using Unity.Jobs;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
+
 using UnityEngine.Scripting;
 using UnityEngine.XR.ARSubsystems;
 
@@ -107,37 +107,20 @@ namespace UnityEngine.XR.ARKit
             }
         }
 
-        protected override IProvider CreateProvider()
+        protected override Provider CreateProvider()
         {
-            return new Provider();
+            return new ARKitProvider();
         }
 
-        class Provider : IProvider
+        class ARKitProvider : Provider
         {
-            public Provider()
-            {
-                UnityARKit_FaceProvider_Initialize();
-            }
+            public ARKitProvider() => UnityARKit_FaceProvider_Initialize();
 
-            public override void Start()
-            {
-                UnityARKit_FaceProvider_Start();
-            }
+            public override void Start() => UnityARKit_FaceProvider_Start();
 
-            public override void Stop()
-            {
-                UnityARKit_FaceProvider_Stop();
-            }
+            public override void Stop() => UnityARKit_FaceProvider_Stop();
 
-            public override void Destroy()
-            {
-                UnityARKit_FaceProvider_Shutdown();
-            }
-
-            public override bool supported
-            {
-                get { return UnityARKit_FaceProvider_IsSupported(); }
-            }
+            public override void Destroy() => UnityARKit_FaceProvider_Shutdown();
 
             public unsafe override void GetFaceMesh(
                 TrackableId faceId,
@@ -304,10 +287,7 @@ namespace UnityEngine.XR.ARKit
                 }
             }
 
-            public override int supportedFaceCount
-            {
-                get { return UnityARKit_FaceProvider_GetSupportedFaceCount(); }
-            }
+            public override int supportedFaceCount => UnityARKit_FaceProvider_GetSupportedFaceCount();
 
             public override int maximumFaceCount
             {
@@ -317,14 +297,13 @@ namespace UnityEngine.XR.ARKit
         }
 
         // this method is run on startup of the app to register this provider with XR Subsystem Manager
-#if UNITY_2019_2_OR_NEWER
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-#else
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-#endif
         static void RegisterDescriptor()
         {
 #if UNITY_IOS && !UNITY_EDITOR
+            if (!UnityARKit_FaceProvider_IsSupported())
+                return;
+
             var descriptorParams = new FaceSubsystemParams
             {
                 supportsFacePose = true,

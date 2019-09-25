@@ -4,13 +4,17 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.0.0-preview.3] - 2019-09-26
+### Improvements
+- Build compiled binaries with Xcode 10.3 (10G8) and Xcode 11 (11A420a)
+
 ## [3.0.0-preview.2] - 2019-09-05
 ### Improvements
 - Update [ARSubsystems](https://docs.unity3d.com/Packages/com.unity.xr.arsubsystems@3.0) dependency to 3.0.0-preview.2
 
 ## [3.0.0-preview.1] - 2019-08-27
 ### New
-- This package now supports bulding with Xcode 9, 10, and 11 beta 7.
+- This package now supports bulding with Xcode 10, and 11 beta 7.
 
 ## [1.1.0-preview.4]
 ### New
