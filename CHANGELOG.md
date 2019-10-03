@@ -3,6 +3,10 @@ All notable changes to this package will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+## [1.1.0-preview.6] - 2019-10-04
+### New
+- Adding support for eye tracking.
+- Xcode : Version 11.0 beta 6 (11M392r)
 
 ## [1.1.0-preview.5] - 2019-08-29
 ### Fixes

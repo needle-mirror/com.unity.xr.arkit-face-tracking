@@ -1,16 +1,16 @@
 {
   "name": "com.unity.xr.arkit-face-tracking",
   "displayName": "ARKit Face Tracking",
-  "version": "1.1.0-preview.5",
+  "version": "1.1.0-preview.6",
   "unity": "2018.3",
   "description": "Support for face tracking on ARKit.\n\nIncludes support for: \n▪ Face pose tracking \n▪ Blendshapes \n\nNote: Only supported on devices with a forward-facing depth camera, like the iPhone X",
   "dependencies": {
-    "com.unity.xr.arkit": "2.2.0-preview.5",
-    "com.unity.xr.arsubsystems": "2.2.0-preview.3"
+    "com.unity.xr.arkit": "2.2.0-preview.6",
+    "com.unity.xr.arsubsystems": "2.2.0-preview.6"
   },
   "repository": {
     "type": "git",
     "url": "git@github.cds.internal.unity3d.com:unity/com.unity.xr.arkit-face-tracking.git",
-    "revision": "aeb7eabad687e784966463b1aa1566f0add4179f"
+    "revision": "8a1d8ca5ae8047bebd0986712da1528b17db5daf"
   }
 }

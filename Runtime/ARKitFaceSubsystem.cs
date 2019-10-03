@@ -35,6 +35,9 @@ namespace UnityEngine.XR.ARKit
         static extern bool UnityARKit_FaceProvider_IsSupported();
 
         [DllImport("__Internal")]
+        static extern bool UnityARKit_FaceProvider_IsEyeTrackingSupported();
+
+        [DllImport("__Internal")]
         static extern void UnityARKit_FaceProvider_DeallocateTempMemory(IntPtr ptr);
 
         [DllImport("__Internal")]
@@ -327,6 +330,7 @@ namespace UnityEngine.XR.ARKit
                 supportsFacePose = true,
                 supportsFaceMeshVerticesAndIndices = true,
                 supportsFaceMeshUVs = true,
+                supportsEyeTracking = UnityARKit_FaceProvider_IsEyeTrackingSupported(),
                 id = "ARKit-Face",
                 subsystemImplementationType = typeof(ARKitFaceSubsystem)
             };
