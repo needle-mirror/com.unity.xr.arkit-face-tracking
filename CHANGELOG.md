@@ -4,6 +4,14 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.0.0-preview.4] - 2019-10-22
+### New
+- Static libraries were built with Xcode 11.1 (11A1027) and Xcode 10.3 (10G8)
+
+### Fixes
+- Fixed an incorrect face rotation when using the rear camera feed.
+- Correclty report the supported number of simultaneously tracked faces. Previously, [ARFaceManager.supportedFaceCount](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@3.0/api/UnityEngine.XR.ARFoundation.ARFaceManager.html#UnityEngine_XR_ARFoundation_ARFaceManager_supportedFaceCount) would always return the supported number of tracked faces in front-facing camera mode. The value reported now depends on the current configuration since, in rear-facing camera mode, the number could be different.
+
 ## [3.0.0-preview.3] - 2019-09-26
 ### Improvements
 - Build compiled binaries with Xcode 10.3 (10G8) and Xcode 11 (11A420a)
