@@ -31,8 +31,15 @@ namespace UnityEngine.XR.ARKit
         [DllImport("__Internal")]
         static extern bool UnityARKit_FaceProvider_TryAcquireFaceBlendCoefficients(TrackableId faceId, out IntPtr ptrBlendCoefficientData, out int numArrayBlendCoefficients);
 
+#if UNITY_IOS && !UNITY_EDITOR
         [DllImport("__Internal")]
         static extern bool UnityARKit_FaceProvider_IsSupported();
+#else
+        static bool UnityARKit_FaceProvider_IsSupported() => false;
+#endif
+
+        [DllImport("__Internal")]
+        static extern void UnityARKit_FaceProvider_OnRegisterDescriptor();
 
         [DllImport("__Internal")]
         static extern bool UnityARKit_FaceProvider_IsEyeTrackingSupported();
@@ -67,7 +74,10 @@ namespace UnityEngine.XR.ARKit
         static extern int UnityARKit_FaceProvider_GetMaximumFaceCount();
 
         [DllImport("__Internal")]
-        static extern void UnityARKit_FaceProvider_SetMaximumFaceCount(int count);
+        static extern void UnityARKit_FaceProvider_SetRequestedMaximumFaceCount(int count);
+
+        [DllImport("__Internal")]
+        static extern int UnityARKit_FaceProvider_GetRequestedMaximumFaceCount();
 
         /// <summary>
         /// Get the blend shape coefficients for the face. Blend shapes describe a number of facial
@@ -289,10 +299,12 @@ namespace UnityEngine.XR.ARKit
 
             public override int supportedFaceCount => UnityARKit_FaceProvider_GetSupportedFaceCount();
 
-            public override int maximumFaceCount
+            public override int currentMaximumFaceCount => UnityARKit_FaceProvider_GetMaximumFaceCount();
+
+            public override int requestedMaximumFaceCount
             {
-                get { return UnityARKit_FaceProvider_GetMaximumFaceCount(); }
-                set { UnityARKit_FaceProvider_SetMaximumFaceCount(value); }
+                get => UnityARKit_FaceProvider_GetRequestedMaximumFaceCount();
+                set => UnityARKit_FaceProvider_SetRequestedMaximumFaceCount(value);
             }
         }
 
@@ -300,9 +312,10 @@ namespace UnityEngine.XR.ARKit
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void RegisterDescriptor()
         {
-#if UNITY_IOS && !UNITY_EDITOR
             if (!UnityARKit_FaceProvider_IsSupported())
                 return;
+
+            UnityARKit_FaceProvider_OnRegisterDescriptor();
 
             var descriptorParams = new FaceSubsystemParams
             {
@@ -315,7 +328,6 @@ namespace UnityEngine.XR.ARKit
             };
 
             XRFaceSubsystemDescriptor.Create(descriptorParams);
-#endif
         }
     }
 }
