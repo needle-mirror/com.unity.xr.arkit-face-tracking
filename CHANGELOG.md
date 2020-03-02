@@ -4,6 +4,10 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.1.0-preview.7] - 2020-03-03
+### Fixes
+- Build compiled binaries with Xcode 10.3 (10G8) and Xcode 11 (11C505).
+
 ## [3.1.0-preview.6] - 2020-02-18
 ### Fixes
 - Updating version dependency on com.unity.xr.arkit.
