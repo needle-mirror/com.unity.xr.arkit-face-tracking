@@ -4,29 +4,11 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [3.1.0-preview.8] - 2020-03-12
+## [3.1.3] - 2020-04-13
+- Build compiled binaries with Xcode 10.3 (10G8) and Xcode 11.4 (11E146).
 
-## [3.1.0-preview.7] - 2020-03-03
-### Fixes
-- Build compiled binaries with Xcode 10.3 (10G8) and Xcode 11 (11C505).
-
-## [3.1.0-preview.6] - 2020-02-18
-### Fixes
-- Updating version dependency on com.unity.xr.arkit.
-
-## [3.1.0-preview.4] - 2020-01-17
-### Fixes
-- Updating version dependency on com.unity.xr.arkit.
-
-## [3.1.0-preview.2] - 2019-11-22
-### Fixes
-- Cleaning the static library meta files.
-
-## [3.1.0-preview.1] - 2019-11-21
-### Improvements
-- Rebuilt static libraries.
-
-## [3.0.2] - 2019-12-03
+## [3.0.2] - 2020-03-18
+- Build compiled binaries with Xcode 10.3 (10G8) and Xcode 11.3.1 (11C505).
 
 ### Fixes
 - Updating version dependency on com.unity.xr.arkit.
