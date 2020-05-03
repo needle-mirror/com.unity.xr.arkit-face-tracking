@@ -10,6 +10,9 @@ using UnityEngine.XR.ARSubsystems;
 
 namespace UnityEngine.XR.ARKit
 {
+    /// <summary>
+    /// The ARKit implementation of the <c>XRFaceSubsystem</c>. Do not create this directly. Use the <c>SubsystemManager</c> instead.
+    /// </summary>
     [Preserve]
     public class ARKitFaceSubsystem : XRFaceSubsystem
     {
@@ -117,10 +120,11 @@ namespace UnityEngine.XR.ARKit
             }
         }
 
-        protected override Provider CreateProvider()
-        {
-            return new ARKitProvider();
-        }
+        /// <summary>
+        /// Creates the ARKit-specific implementation which will service the `XRFaceSubsystem`.
+        /// </summary>
+        /// <returns>A new instance of the `Provider` specific to ARKit.</returns>
+        protected override Provider CreateProvider() => new ARKitProvider();
 
         class ARKitProvider : Provider
         {

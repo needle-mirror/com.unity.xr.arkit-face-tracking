@@ -4,10 +4,31 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.0.0-preview.3] - 2020-05-04
+### Changes
+- Static libraries were built with Xcode 11.4.1 (11E503a) and Xcode 10.3 (10G8).
+
+### Fixes
+- Fixed all broken or missing scripting API documentation.
+
 ## [4.0.0-preview.1] - 2020-02-26
 ### Changes
 - The ARSubsystem implementions have been updated to reflect changes in the ARSubsystems API.
 - See the [ARFoundation Migration Guide](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/manual/migration-guide-3.html) for more details.
+
+## [3.1.3] - 2020-04-13
+### Changes
+- Build compiled binaries with Xcode 10.3 (10G8) and Xcode 11.4 (11E146).
+
+## [3.1.0-preview.8] - 2020-03-12
+
+## [3.1.0-preview.7] - 2020-03-03
+### Changes
+- Build compiled binaries with Xcode 10.3 (10G8) and Xcode 11 (11C505).
+
+## [3.1.0-preview.6] - 2020-02-18
+### Fixes
+- Updating version dependency on com.unity.xr.arkit.
 
 ## [3.1.0-preview.4] - 2020-01-17
 ### Fixes
@@ -18,10 +39,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Cleaning the static library meta files.
 
 ## [3.1.0-preview.1] - 2019-11-21
-### Improvements
+### Changes
 - Rebuilt static libraries.
 
-## [3.0.2] - 2019-12-03
+## [3.0.2] - 2020-03-18
+### Changes
+- Build compiled binaries with Xcode 10.3 (10G8) and Xcode 11.3.1 (11C505).
 
 ### Fixes
 - Updating version dependency on com.unity.xr.arkit.
@@ -35,7 +58,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [3.0.0] - 2019-11-05
 
 ## [3.0.0-preview.4] - 2019-10-22
-### New
+### Changes
 - Static libraries were built with Xcode 11.1 (11A1027) and Xcode 10.3 (10G8)
 
 ### Fixes
@@ -43,7 +66,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Correctly report the supported number of simultaneously tracked faces. Previously, [ARFaceManager.supportedFaceCount](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@3.0/api/UnityEngine.XR.ARFoundation.ARFaceManager.html#UnityEngine_XR_ARFoundation_ARFaceManager_supportedFaceCount) would always return the supported number of tracked faces in front-facing camera mode. The value reported now depends on the current configuration since, in rear-facing camera mode, the number could be different.
 
 ## [3.0.0-preview.3] - 2019-09-26
-### Improvements
+### Changes
 - Build compiled binaries with Xcode 10.3 (10G8) and Xcode 11 (11A420a)
 
 ## [3.0.0-preview.2] - 2019-09-05
@@ -54,18 +77,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### New
 - This package now supports bulding with Xcode 10, and 11 beta 7.
 
-## [1.1.0-preview.4]
+## [1.1.0-preview.4] - 2019-07-29
 ### New
 - Add support for eye tracking.
 
-### Fixes
+### Changes
 - Recompile static library with XCode 11 beta 5.
 
 ## [1.1.0-preview.3] - 2019-07-18
-### Fixes
+### Changes
 - Recompile static library with Xcode 11 beta 4.
 
 ## [1.1.0-preview.2] - 2019-07-15
+### Changes
 - Recompile static library with Xcode 11 beta 3.
 - Update Unity dependency to 2019.1
 
