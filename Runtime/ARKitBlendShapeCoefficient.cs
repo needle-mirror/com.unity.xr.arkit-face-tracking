@@ -374,7 +374,7 @@ namespace UnityEngine.XR.ARKit
     }
 
     /// <summary>
-    /// An entry that specifies how much of a specific <see cref="XRArkitBlendShapeLocation"/> is present in the current expression on the face.
+    /// An entry that specifies how much of a specific <see cref="ARKitBlendShapeLocation"/> is present in the current expression on the face.
     /// </summary>
     /// <remarks>
     /// You get a list of these for every expression a face makes.
