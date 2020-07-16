@@ -16,6 +16,7 @@ namespace UnityEngine.XR.ARKit
     [Preserve]
     public class ARKitFaceSubsystem : XRFaceSubsystem
     {
+#if UNITY_XR_ARKIT_FACE_TRACKING_ENABLED && UNITY_XR_ARKIT_LOADER_ENABLED
         /// <summary>
         /// calls available to native code, linked via extern C symbols
         /// </summary>
@@ -81,6 +82,87 @@ namespace UnityEngine.XR.ARKit
 
         [DllImport("__Internal")]
         static extern int UnityARKit_FaceProvider_GetRequestedMaximumFaceCount();
+#else
+        static readonly string k_ExceptionMsg = "ARKit Plugin Provider not enabled in project settings.";
+
+        static void UnityARKit_FaceProvider_Initialize()
+        {
+            throw new System.NotImplementedException(k_ExceptionMsg);
+        }
+
+        static void UnityARKit_FaceProvider_Shutdown()
+        {
+            throw new System.NotImplementedException(k_ExceptionMsg);
+        }
+
+        static void UnityARKit_FaceProvider_Start()
+        {
+            throw new System.NotImplementedException(k_ExceptionMsg);
+        }
+
+        static void UnityARKit_FaceProvider_Stop()
+        {
+            throw new System.NotImplementedException(k_ExceptionMsg);
+        }
+
+        static bool UnityARKit_FaceProvider_TryAcquireFaceBlendCoefficients(TrackableId faceId, out IntPtr ptrBlendCoefficientData, out int numArrayBlendCoefficients)
+        {
+            throw new System.NotImplementedException(k_ExceptionMsg);
+        }
+
+        static bool UnityARKit_FaceProvider_IsSupported() => false;
+
+        static void UnityARKit_FaceProvider_OnRegisterDescriptor()
+        {
+            throw new System.NotImplementedException(k_ExceptionMsg);
+        }
+
+        static bool UnityARKit_FaceProvider_IsEyeTrackingSupported() => false;
+
+        static void UnityARKit_FaceProvider_DeallocateTempMemory(IntPtr ptr)
+        {
+            throw new System.NotImplementedException(k_ExceptionMsg);
+        }
+
+        static unsafe void* UnityARKit_FaceProvider_AcquireChanges(
+            out void* addedPtr, out int addedLength,
+            out void* updatedPtr, out int updatedLength,
+            out void* removedPtr, out int removedLength,
+            out int elementSize)
+        {
+            throw new System.NotImplementedException(k_ExceptionMsg);
+        }
+
+        static unsafe void UnityARKit_FaceProvider_ReleaseChanges(void* context)
+        {
+            throw new System.NotImplementedException(k_ExceptionMsg);
+        }
+
+        static unsafe void* UnityARKit_FaceProvider_AcquireFaceAnchor(
+            TrackableId faceId,
+            out void* vertexPtr, out void* uvPtr, out int vertexCount,
+            out void* indexPtr, out int triangleCount)
+        {
+            throw new System.NotImplementedException(k_ExceptionMsg);
+        }
+
+        static unsafe void UnityARKit_FaceProvider_ReleaseFaceAnchor(
+            void* faceAnchor)
+        {
+            throw new System.NotImplementedException(k_ExceptionMsg);
+        }
+
+        static int UnityARKit_FaceProvider_GetSupportedFaceCount() => 0;
+
+        static int UnityARKit_FaceProvider_GetMaximumFaceCount() => 0;
+
+        static void UnityARKit_FaceProvider_SetRequestedMaximumFaceCount(int count)
+        {
+            throw new System.NotImplementedException(k_ExceptionMsg);
+        }
+
+        static int UnityARKit_FaceProvider_GetRequestedMaximumFaceCount() => 0;
+#endif
 
         /// <summary>
         /// Get the blend shape coefficients for the face. Blend shapes describe a number of facial
