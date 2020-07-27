@@ -4,6 +4,10 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.1.0-preview.6] - 2020-07-27
+### Changes
+- Static library was built with Xcode 12.0 beta 3 (12A8169g).
+
 ## [4.1.0-preview.5] - 2020-07-16
 ### Changes
 - The ARKit face tracking static library is no longer part of the generated Xcode project when face tracking is disabled in the ARKit settings in the `XR Plug-in Management` UI. Added default implementations of calls to native code when face tracking is excluded so that linker errors do not occur.
