@@ -4,6 +4,15 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.0.8] - 2020-08-24
+### Changes
+- Updated dependencies on ARSubsystems and ARKit XR Plugin packages to 4.0.8.
+
+## [4.0.6] - 2020-07-27
+### Changes
+- Static library was built with Xcode 11.6 (11E708).
+- Removed support for Xcode versions below version 11.0 as per apple app store submission guidelines.  [See App Store submission guidelines for more information](https://developer.apple.com/app-store/submissions)
+
 ## [4.0.2] - 2020-07-10
 ### Fixes
 - Fixed a typo in the documentation
