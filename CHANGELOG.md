@@ -4,6 +4,10 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.1.7] - 2020-10-07
+### Fixes
+- Updating version dependency on com.unity.xr.arkit.
+
 ## [3.1.6] - 2020-09-08
 ### Fixes
 - Updating version dependency on com.unity.xr.arkit.
@@ -45,7 +49,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### New
 - This package now supports bulding with Xcode 10, and 11 beta 7.
 
-## [1.1.0-preview.4]
+## [1.1.0-preview.4] - 2019-07-29
 ### New
 - Add support for eye tracking.
 
