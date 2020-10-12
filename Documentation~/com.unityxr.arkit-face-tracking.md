@@ -32,6 +32,7 @@ This version of ARKit Face Tracking is compatible with the following versions of
 * 2019.4
 * 2020.1
 * 2020.2
+* 2021.1
 
 To use this package, you must have:
 
