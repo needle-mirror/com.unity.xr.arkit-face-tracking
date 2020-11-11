@@ -42,6 +42,7 @@ To use this package, you must have:
   - iPhone XS Max
   - iPhone XR
   - iPhone 11
+  - iPhone 12
   - iPad Pro (11-inch)
   - iPad Pro (12.9-inch, 3rd generation)
   - iPhone SE
