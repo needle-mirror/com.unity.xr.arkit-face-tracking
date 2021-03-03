@@ -3,7 +3,7 @@ uid: arkitfacetracking-manual
 ---
 # About ARKit Face Tracking
 
-This package provides face tracking support to augment the [ARKit XR Plugin](xref:arkit-manual).
+This package provides face tracking support to augment the [ARKit XR Plug-in](xref:arkit-manual).
 
 ## Installing ARKit Face Tracking
 
@@ -29,10 +29,7 @@ Face tracking requires the use of the front-facing (selfie) camera. When the fro
 
 This version of ARKit Face Tracking is compatible with the following versions of the Unity Editor:
 
-* 2019.4
-* 2020.1
-* 2020.2
-* 2021.1
+* 2021.2
 
 To use this package, you must have:
 
