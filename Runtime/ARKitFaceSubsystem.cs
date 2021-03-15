@@ -165,7 +165,7 @@ namespace UnityEngine.XR.ARKit
 #endif
 
         /// <summary>
-        /// Get the blend shape coefficients for the face. Blend shapes describe a number of facial
+        /// Gets the blend shape coefficients for the face. Blend shapes describe a number of facial
         /// features on a scale of 0..1. For example, how closed is the left eye, how open is the mouth.
         /// See <see cref="ARKitBlendShapeCoefficient"/> for more details.
         /// </summary>

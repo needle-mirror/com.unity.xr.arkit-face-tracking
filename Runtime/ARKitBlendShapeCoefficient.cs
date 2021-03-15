@@ -4,8 +4,15 @@ using System.Runtime.InteropServices;
 namespace UnityEngine.XR.ARKit
 {
     /// <summary>
-    /// Enum values that represent face action units that affect the expression on the face
+    /// Enum values that identify the face action units affecting the expression on the face.
     /// </summary>
+    /// <remarks>Each action unit corresponds to a facial feature that can move. A coefficient of zero for the
+    /// feature represents the neutral position, while a coefficient of one represents the fully articulated
+    /// position.
+    ///
+    /// Call <see cref="ARKitFaceSubsystem.GetBlendShapeCoefficients*"/> to get the current coefficients of each
+    /// blend shape location for the current facial expression.
+    /// </remarks>
     public enum ARKitBlendShapeLocation
     {
         /// <summary>
@@ -377,7 +384,8 @@ namespace UnityEngine.XR.ARKit
     /// An entry that specifies how much of a specific <see cref="ARKitBlendShapeLocation"/> is present in the current expression on the face.
     /// </summary>
     /// <remarks>
-    /// You get a list of these for every expression a face makes.
+    /// Call <see cref="ARKitFaceSubsystem.GetBlendShapeCoefficients"/> to get the list of coefficients for each
+    /// blend shape location of the current facial expression.
     /// </remarks>
     [StructLayout(LayoutKind.Sequential)]
     public struct ARKitBlendShapeCoefficient : IEquatable<ARKitBlendShapeCoefficient>
@@ -389,11 +397,14 @@ namespace UnityEngine.XR.ARKit
         /// <summary>
         /// The specific <see cref="ARKitBlendShapeLocation"/> being examined.
         /// </summary>
+        /// <value>Identifies the action unit for this coefficient value.</value>
         public ARKitBlendShapeLocation blendShapeLocation => m_BlendShapeLocation;
 
         /// <summary>
         /// A value from 0.0 to 1.0 that specifies how active the associated <see cref="ARKitBlendShapeLocation"/> is in this expression.
         /// </summary>
+        /// <value>A coefficient of zero represents a neutral position of this blend shape, while a coefficient of one
+        /// represents a fully articulated position.</value>
         public float coefficient => m_Coefficient;
 
         /// <summary>
