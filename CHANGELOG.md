@@ -5,6 +5,8 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.1.7] - 2021-03-31
+
 ## [4.1.5] - 2021-01-25
 
 ## [4.1.3] - 2021-01-05
@@ -12,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changes
 
 - Removed the `CONTRIBUTING.md` file as this package does not accept contributions.
+- This package now requires Unity 2019.4.15f1 or later.
 
 ## [4.1.1] - 2020-11-11
 ### Changes
