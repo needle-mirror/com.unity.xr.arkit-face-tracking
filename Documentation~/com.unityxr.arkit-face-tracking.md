@@ -25,7 +25,7 @@ Face tracking requires the use of the front-facing (selfie) camera. When the fro
 ## Requirements
 This version of ARKit Face Tracking is compatible with the following versions of the Unity Editor:
 
-* 2019.2 and later (recommended)
+* 2019.4.15f1 and later (recommended)
 
 To use this package, you must have:
 
