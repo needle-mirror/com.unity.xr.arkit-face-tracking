@@ -8,9 +8,20 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.2.1] - 2021-10-06
+## [5.0.0-pre.5] - 2021-10-28
 
-No changes
+### Changed
+
+- The minimum Unity version for this package is now 2021.2.
+- The user preference for "Don't warn me again" in the deprecation warning dialog, is saved on a per-project basis.
+
+### Deprecated
+
+- This package is now deprecated and has been merged with `com.unity.xr.arkit`.
+
+### Fixed
+
+- Fixed the deprecation warning dialog where an alternate blank dialog will appear alongside the main message dialog.
 
 ## [4.2.0] - 2021-08-11
 
@@ -115,7 +126,7 @@ No changes
 
 ### Changed
 
-- No changes. Updated package version to stay in sync with [ARKit XR Plug-in](https://docs.unity3d.com/Packages/com.unity.xr.arkit@4.1).
+- No changes. Updated package version to stay in sync with [Apple ARKit XR Plug-in](https://docs.unity3d.com/Packages/com.unity.xr.arkit@4.1).
 
 ## [4.1.0-preview.2] - 2020-06-24
 
@@ -286,7 +297,11 @@ No changes
 
 ### Added
 
-This is the first release of *ARKit Face Tracking*.
+This is the first release of *Apple ARKit Face Tracking XR Plug-in*.
 
 Provides runtime support for Face Tracking on ARKit. This is a separate package from com.unity.xr.arkit due to security concerns: apps that contain certain face-tracking related symbols in their compiled binaries will fail App Store validation unless additional documentation explaning the uses of face tracking are documented. This allows face tracking support to be added separately.
+
+
+<hr>
+\* *Apple and ARKit are trademarks of Apple Inc., registered in the U.S. and other countries and regions.*
 
