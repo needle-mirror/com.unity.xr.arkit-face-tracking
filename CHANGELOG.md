@@ -8,6 +8,12 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.2.2] - 2021-12-09
+
+### Fixed
+
+- Fixed bug where setting a texture's [wrapMode](xref:UnityEngine.Texture.wrapMode) to clamp on the [facePrefab](xref:UnityEngine.XR.ARFoundation.ARFaceManager.facePrefab) would cause the texture to shift incorrectly. The issue tracker can be found [here](https://issuetracker.unity3d.com/issues/ios-arkit-face-mesh-displays-its-materials-texture-incorrectly-when-texturewrapmode-is-set-to-clamp).
+
 ## [4.2.1] - 2021-10-06
 
 No changes
@@ -289,4 +295,3 @@ No changes
 This is the first release of *ARKit Face Tracking*.
 
 Provides runtime support for Face Tracking on ARKit. This is a separate package from com.unity.xr.arkit due to security concerns: apps that contain certain face-tracking related symbols in their compiled binaries will fail App Store validation unless additional documentation explaning the uses of face tracking are documented. This allows face tracking support to be added separately.
-
