@@ -5,6 +5,12 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.1.9] - 2022-01-06
+
+### Fixes
+
+- Fixed bug where setting a texture's [wrapMode](xref:UnityEngine.Texture.wrapMode) to clamp on the [facePrefab](xref:UnityEngine.XR.ARFoundation.ARFaceManager.facePrefab) would cause the texture to shift incorrectly. The issue tracker can be found [here](https://issuetracker.unity3d.com/issues/ios-arkit-face-mesh-displays-its-materials-texture-incorrectly-when-texturewrapmode-is-set-to-clamp).
+
 ## [4.1.7] - 2021-03-31
 
 ## [4.1.5] - 2021-01-25
