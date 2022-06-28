@@ -1,21 +1,21 @@
 {
   "name": "com.unity.xr.arkit-face-tracking",
   "displayName": "Apple ARKit Face Tracking XR Plugin",
-  "version": "5.0.0-pre.12",
+  "version": "5.0.0-pre.13",
   "unity": "2021.2",
   "description": "This package is now deprecated. All the functionality that was once contained here can now be found in com.unity.xr.arkit.\n\n* Apple and ARKit are trademarks of Apple Inc., registered in the U.S. and other countries and regions.",
   "dependencies": {
-    "com.unity.xr.arkit": "5.0.0-pre.12"
+    "com.unity.xr.arkit": "5.0.0-pre.13"
   },
   "_upm": {
-    "changelog": "### Changed\n\n- Deprecation dialog will now be supressed in batch mode, as it cannot be clicked."
+    "changelog": "No changes"
   },
   "upmCi": {
-    "footprint": "271f6f3f6c6cdfdad1ff1c85fa0bd72084d35dd4"
+    "footprint": "3be5098af0101ba4770509a102eff33f0652c887"
   },
   "repository": {
     "url": "https://github.cds.internal.unity3d.com/unity/arfoundation.git",
     "type": "git",
-    "revision": "4577f2a07a8b076ccc52ae239e6b66396e9d05eb"
+    "revision": "3a1b3b7b0713aa242ec7d951f519b8b5e99e975b"
   }
 }
