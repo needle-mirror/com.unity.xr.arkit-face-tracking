@@ -8,6 +8,13 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.2.10] - 2024-01-12
+
+### Changed
+
+- Rebuilt static libraries with Xcode version 15.1 (15C65). You are now required to build iOS apps using Xcode version 15.1 or newer.
+- Changed the Apple ARKit Plug-in and AR Subsystems dependency versions from 4.2.9 to 4.2.10.
+
 ## [4.2.9] - 2023-10-02
 
 ### Changed
